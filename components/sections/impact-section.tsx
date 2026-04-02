@@ -7,7 +7,7 @@ export function ImpactSection() {
       <div className="relative group bg-cyan-950/10 border border-cyan-400/20 p-6 md:p-8 lg:p-10 mb-12 md:mb-16">
         <div className="absolute top-0 left-0 w-4 h-4 border-t border-l border-cyan-400/40" />
         <div className="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-cyan-400/40" />
-        
+
         <div className="flex flex-col md:flex-row items-start gap-4 md:gap-6">
           <div className="shrink-0">
             <div className="w-12 h-12 rounded-full border border-cyan-400/30 flex items-center justify-center bg-cyan-400/5 text-cyan-400">
@@ -26,11 +26,11 @@ export function ImpactSection() {
               savings is achieved by optimizing{" "}
               <span className="text-white border-b border-cyan-400/30">8 such vessels</span>{" "}
               which resulted in annual fuel savings of around{" "}
-              <span className="text-cyan-400 font-bold">200,000+ gallons</span> — a major commercial win.
+              <span className="text-cyan-400 font-bold">400,000+ gallons</span> — a major commercial win.
             </p>
           </div>
         </div>
-        
+
         <div className="absolute bottom-2 right-4 opacity-[0.03] pointer-events-none select-none font-[family-name:var(--font-headline)] text-4xl font-bold tracking-tighter text-cyan-400">
           IMPACT_REPORT_V.08
         </div>

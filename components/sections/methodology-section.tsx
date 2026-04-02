@@ -16,7 +16,7 @@ export function MethodologySection() {
             <h2 className="font-[family-name:var(--font-headline)] text-3xl md:text-4xl lg:text-5xl font-bold mb-8 md:mb-12 tracking-tight text-foreground">
               System Overview <br />&amp; Methodology
             </h2>
-            
+
             <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
               <div className="space-y-6">
                 <ul className="text-slate-400 text-base md:text-lg leading-relaxed space-y-6 list-none">
@@ -37,12 +37,12 @@ export function MethodologySection() {
                   <li>
                     <p>
                       <b className="text-cyan-400">Commercial Impact:</b> Skyrocketed prediction accuracy from 80% to 98.5%, directly driving
-                      a ~15% per-vessel efficiency gain, conserving 200k+ gallons of fuel,
+                      a ~15% per-vessel efficiency gain, conserving 400k+ gallons of fuel per annum,
                       and unlocking $1.2M in annual cost savings.
                     </p>
                   </li>
                 </ul>
-                
+
                 <div className="flex flex-col gap-4 mt-8 md:mt-12">
                   {methodologySteps.map((step) => (
                     <div
@@ -59,7 +59,7 @@ export function MethodologySection() {
                   ))}
                 </div>
               </div>
-              
+
               <div className="relative group">
                 <div className="absolute -top-2 -left-2 w-6 h-6 border-t border-l border-cyan-400/40" />
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r border-cyan-400/40" />

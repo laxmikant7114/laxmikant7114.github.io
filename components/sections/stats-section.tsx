@@ -1,7 +1,7 @@
 const stats = [
   { value: "$1.2M+", label: "Annual Savings Generated" },
   { value: "98.5%", label: "Fuel Prediction Accuracy" },
-  { value: "200,000+", label: "Gallons of Fuel Conserved" },
+  { value: "400,000+", label: "Gallons of Fuel Conserved per annum" },
   { value: "120+", label: "Hours/Month Automated" },
 ]
 

@@ -20,19 +20,6 @@ const projects = {
     impact: "Reduced fuel wastage by 12% through accurate consumption tracking",
     technologies: ["Python", "SQL", "Power BI", "Azure IoT"],
   },
-  "performance-report": {
-    title: "Performance Report",
-    subtitle: "Vessel Performance Analytics",
-    description: "Advanced performance reporting system that generates comprehensive vessel efficiency reports, enabling data-driven decision making for fleet management.",
-    highlights: [
-      "Automated weekly and monthly performance reports",
-      "KPI tracking and benchmarking",
-      "Comparative fleet analysis",
-      "Executive dashboard summaries",
-    ],
-    impact: "Improved fleet efficiency visibility by 40%",
-    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Airflow"],
-  },
   "analytics-dashboard": {
     title: "Analytics Dashboard",
     subtitle: "Interactive Data Visualization",
@@ -46,6 +33,20 @@ const projects = {
     impact: "Enabled 24/7 operational monitoring for fleet managers",
     technologies: ["React", "D3.js", "Node.js", "MongoDB"],
   },
+  "performance-report": {
+    title: "Vessel Performance Report",
+    subtitle: "Vessel Performance Analytics",
+    description: "Advanced performance reporting system that generates comprehensive vessel efficiency reports, enabling data-driven decision making for fleet management.",
+    highlights: [
+      "Automated weekly and monthly performance reports",
+      "KPI tracking and benchmarking",
+      "Comparative fleet analysis",
+      "Executive dashboard summaries",
+    ],
+    impact: "Improved fleet efficiency visibility by 40%",
+    technologies: ["Python", "Tableau", "PostgreSQL", "Apache Airflow"],
+  },
+
   "report-summary": {
     title: "Report Summary",
     subtitle: "AI-Powered Report Generation",
@@ -105,7 +106,7 @@ export default async function ProjectPage({ params }: Props) {
                     Back to Projects
                   </span>
                 </Link>
-                
+
                 <div className="w-12 h-1 bg-cyan-400 mb-8" />
                 <h1 className="font-[family-name:var(--font-headline)] text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-4">
                   {project.title}
