@@ -9,25 +9,25 @@ const contactMethods = [
   {
     icon: Mail,
     label: "Email",
-    value: "laxmikant@example.com",
-    href: "mailto:laxmikant@example.com",
+    value: "laxmikant@yelgandrawar.com",
+    href: "mailto:laxmikant@yelgandrawar.com",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "linkedin.com/in/laxmikant",
+    value: "linkedin.com/in/laxmikant-yelgandrawar/",
     href: "https://www.linkedin.com/in/laxmikant-yelgandrawar/",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "github.com/laxmikant",
+    value: "github.com/laxmikant7114",
     href: "https://github.com",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "India",
+    value: "Pune",
     href: "#",
   },
 ]

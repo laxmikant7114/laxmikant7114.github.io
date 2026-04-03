@@ -12,30 +12,31 @@ const activities = [
   },
   {
     icon: FileText,
-    date: "February 2026",
-    title: "Technical Documentation Published",
-    description: "Published comprehensive analytics framework documentation for industrial data modeling.",
-    type: "publication",
+    date: "July 2025",
+    title: "Actual Vessel Fuel Consumption per state Unlocked",
+    description: " - By cleverly breaking down aggregated fuel data over different Vessel state, unlocked the decision making to identify the actual vs predicted fuel difference at vessel state. - It helped to draw an analysis based on fuel difference in a particular vessel state.",
+    type: "contribution",
+
   },
   {
     icon: Github,
-    date: "January 2026",
-    title: "Open Source Contribution",
-    description: "Released vessel telemetry analysis toolkit on GitHub for the data science community.",
-    type: "contribution",
+    date: "March 2025",
+    title: "Published Research Paper in IEEE Conference Gwalior",
+    description: "Built and Automated smart system to ease the Vehicle Traffic at Shopping malls my mitagating the Manual process with smart and Convenient System for the Customers.",
+    type: "publication",
   },
   {
     icon: Linkedin,
-    date: "December 2025",
-    title: "Industry Recognition",
-    description: "Featured article on LinkedIn about industrial efficiency optimization strategies.",
+    date: "February 2024",
+    title: "Stated a Startup in IT Industry",
+    description: "Built and scaled a cross-functional team of 16 members, Orchestrated daily business operations and automated lead generation pipelines, build Business strategies to reach the targeted clients by optimizing marketing workflows",
     type: "social",
   },
   {
     icon: BookOpen,
-    date: "November 2025",
-    title: "Workshop Presentation",
-    description: "Presented data modeling techniques at Industrial Analytics Conference 2025.",
+    date: "November 2023",
+    title: "Authored the paper - The Unsung Warriors of Independence",
+    description: "earning selection as one of India’s top 400 researchers at the National Young Researcher’s Conclave held at Delhi 2022. Represented the Devgiri Region on a national platform, demonstrating excellence in academic research and communication.",
     type: "event",
   },
   {
@@ -72,26 +73,24 @@ export default function ActivityPage() {
               <div className="relative">
                 {/* Timeline line */}
                 <div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-cyan-900/30" />
-                
+
                 {activities.map((activity, index) => {
                   const Icon = activity.icon
                   const isLeft = index % 2 === 0
-                  
+
                   return (
                     <div
                       key={index}
-                      className={`relative mb-12 ${
-                        isLeft ? "md:pr-[50%] md:text-right" : "md:pl-[50%]"
-                      }`}
+                      className={`relative mb-12 ${isLeft ? "md:pr-[50%] md:text-right" : "md:pl-[50%]"
+                        }`}
                     >
                       {/* Timeline dot */}
                       <div className="absolute left-0 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-cyan-400 z-10" />
-                      
+
                       {/* Content */}
                       <div
-                        className={`ml-8 md:ml-0 ${
-                          isLeft ? "md:mr-8" : "md:ml-8"
-                        }`}
+                        className={`ml-8 md:ml-0 ${isLeft ? "md:mr-8" : "md:ml-8"
+                          }`}
                       >
                         <div
                           className={`bg-[#0d1017] border border-cyan-900/30 p-6 hover:border-cyan-400/50 transition-all group`}
@@ -122,7 +121,7 @@ export default function ActivityPage() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-cyan-900/20 border border-cyan-900/20">
                 <div className="p-8 bg-[#0a0c10] text-center">
                   <div className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold text-cyan-400 mb-2">
-                    15+
+                    5+
                   </div>
                   <div className="text-[10px] font-[family-name:var(--font-headline)] uppercase tracking-widest text-slate-500">
                     Projects Completed
@@ -130,7 +129,7 @@ export default function ActivityPage() {
                 </div>
                 <div className="p-8 bg-[#0a0c10] text-center">
                   <div className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold text-cyan-400 mb-2">
-                    5+
+                    1.5+
                   </div>
                   <div className="text-[10px] font-[family-name:var(--font-headline)] uppercase tracking-widest text-slate-500">
                     Years Experience
@@ -138,18 +137,18 @@ export default function ActivityPage() {
                 </div>
                 <div className="p-8 bg-[#0a0c10] text-center">
                   <div className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold text-cyan-400 mb-2">
-                    10+
+                    2+
                   </div>
                   <div className="text-[10px] font-[family-name:var(--font-headline)] uppercase tracking-widest text-slate-500">
-                    Publications
+                    Research Paper Published
                   </div>
                 </div>
                 <div className="p-8 bg-[#0a0c10] text-center">
                   <div className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold text-cyan-400 mb-2">
-                    3
+
                   </div>
                   <div className="text-[10px] font-[family-name:var(--font-headline)] uppercase tracking-widest text-slate-500">
-                    Awards
+
                   </div>
                 </div>
               </div>
