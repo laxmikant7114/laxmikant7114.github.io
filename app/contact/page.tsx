@@ -2,7 +2,7 @@
 
 import { TopNav } from "@/components/top-nav"
 import { Footer } from "@/components/footer"
-import { Mail, Linkedin, Github, MapPin, Send } from "lucide-react"
+import { Mail, Linkedin, Github, MapPin, Send, Loader2, CheckCircle, AlertCircle } from "lucide-react"
 import { useState } from "react"
 
 const contactMethods = [
@@ -39,31 +39,43 @@ export default function ContactPage() {
     subject: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setStatus("sending")
 
-    // Construct the WhatsApp message
-    const message = `
-Hello! I have a new message from the contact form:
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/laxmikant.yelgandrawar7114@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email: formData.email,
+            _subject: `Portfolio Contact: ${formData.subject}`,
+            message: formData.message,
+            _template: "table",
+          }),
+        }
+      )
 
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
-Message: ${formData.message}
-  `
-
-    // Encode message for URL
-    const encodedMessage = encodeURIComponent(message)
-
-    // Replace with your WhatsApp number in international format, e.g., 911234567890
-    const phoneNumber = "9177750 02299"
-
-    // Open WhatsApp chat with prefilled message
-    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
-
-    // Optional: Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
+      if (response.ok) {
+        setStatus("success")
+        setFormData({ name: "", email: "", subject: "", message: "" })
+        setTimeout(() => setStatus("idle"), 5000)
+      } else {
+        setStatus("error")
+        setTimeout(() => setStatus("idle"), 5000)
+      }
+    } catch {
+      setStatus("error")
+      setTimeout(() => setStatus("idle"), 5000)
+    }
   }
 
   return (
@@ -194,11 +206,41 @@ Message: ${formData.message}
                     </div>
                     <button
                       type="submit"
-                      className="w-full bg-cyan-400 text-[#0a0c10] px-6 py-4 font-bold text-xs tracking-[0.2em] uppercase hover:bg-cyan-300 transition-all active:scale-[0.98] flex items-center justify-center gap-2"
+                      disabled={status === "sending"}
+                      className="w-full bg-cyan-400 text-[#0a0c10] px-6 py-4 font-bold text-xs tracking-[0.2em] uppercase hover:bg-cyan-300 transition-all active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                      <Send className="w-4 h-4" />
-                      Send Message
+                      {status === "sending" ? (
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                          Sending...
+                        </>
+                      ) : status === "success" ? (
+                        <>
+                          <CheckCircle className="w-4 h-4" />
+                          Message Sent!
+                        </>
+                      ) : status === "error" ? (
+                        <>
+                          <AlertCircle className="w-4 h-4" />
+                          Failed — Try Again
+                        </>
+                      ) : (
+                        <>
+                          <Send className="w-4 h-4" />
+                          Send Message
+                        </>
+                      )}
                     </button>
+                    {status === "success" && (
+                      <p className="text-cyan-400 text-sm text-center mt-2">
+                        Thank you! Your message has been sent successfully.
+                      </p>
+                    )}
+                    {status === "error" && (
+                      <p className="text-red-400 text-sm text-center mt-2">
+                        Something went wrong. Please try again or email directly.
+                      </p>
+                    )}
                   </form>
                 </div>
               </div>
