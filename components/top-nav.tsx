@@ -30,29 +30,33 @@ export function TopNav() {
       <div className="hidden md:flex items-center gap-8">
         <nav className="flex items-center gap-6 lg:gap-10">
           {navLinks.map((link) => {
-            const isActive = link.href === "/" 
-              ? isProjectPage 
+            const isActive = link.href === "/"
+              ? isProjectPage
               : pathname === link.href
 
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`font-[family-name:var(--font-headline)] text-[11px] font-bold tracking-[0.2em] uppercase transition-colors ${
-                  isActive
+                className={`font-[family-name:var(--font-headline)] text-[11px] font-bold tracking-[0.2em] uppercase transition-colors ${isActive
                     ? "text-primary border-b-2 border-primary pb-1"
                     : "text-secondary/60 hover:text-primary"
-                }`}
+                  }`}
               >
                 {link.label}
               </Link>
             )
           })}
         </nav>
-        <button className="border border-cyan-400/50 text-primary px-4 lg:px-6 py-2 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center gap-2">
+        <a
+          href="https://drive.google.com/file/d/1T7pTw5zRudoeM32PVrlmzlCJ945jIzV7/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="border border-cyan-400/50 text-primary px-4 lg:px-6 py-2 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center gap-2"
+        >
           <Download className="w-3 h-3" />
           Download CV
-        </button>
+        </a>
       </div>
 
       {/* Mobile Menu Button */}
@@ -68,8 +72,8 @@ export function TopNav() {
         <div className="absolute top-16 left-0 right-0 bg-[#0a0c10]/98 backdrop-blur-md border-b border-cyan-900/30 md:hidden">
           <nav className="flex flex-col p-4 gap-4">
             {navLinks.map((link) => {
-              const isActive = link.href === "/" 
-                ? isProjectPage 
+              const isActive = link.href === "/"
+                ? isProjectPage
                 : pathname === link.href
 
               return (
@@ -77,20 +81,24 @@ export function TopNav() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className={`font-[family-name:var(--font-headline)] text-sm font-bold tracking-[0.2em] uppercase transition-colors py-2 ${
-                    isActive
+                  className={`font-[family-name:var(--font-headline)] text-sm font-bold tracking-[0.2em] uppercase transition-colors py-2 ${isActive
                       ? "text-primary border-l-2 border-primary pl-4"
                       : "text-secondary/60 hover:text-primary pl-4"
-                  }`}
+                    }`}
                 >
                   {link.label}
                 </Link>
               )
             })}
-            <button className="border border-cyan-400/50 text-primary px-6 py-3 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center justify-center gap-2 mt-2">
+            <a
+              href="https://drive.google.com/file/d/1T7pTw5zRudoeM32PVrlmzlCJ945jIzV7/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border border-cyan-400/50 text-primary px-6 py-3 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center justify-center gap-2 mt-2"
+            >
               <Download className="w-3 h-3" />
               Download CV
-            </button>
+            </a>
           </nav>
         </div>
       )}
