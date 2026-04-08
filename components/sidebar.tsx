@@ -3,12 +3,12 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import Image from "next/image"
-import { 
-  Fuel, 
-  BarChart3, 
-  FileBarChart, 
-  LayoutDashboard, 
-  Sparkles, 
+import {
+  Fuel,
+  BarChart3,
+  FileBarChart,
+  LayoutDashboard,
+  Sparkles,
   ParkingCircle,
   Menu,
   X
@@ -16,39 +16,39 @@ import {
 import { useState } from "react"
 
 const projects = [
-  { 
-    href: "/", 
-    label: "Fuel Optimization", 
-    icon: Fuel,
-    slug: ""
-  },
-  { 
-    href: "/projects/actual-fuel-consumption", 
-    label: "Actual Fuel Consumption", 
-    icon: BarChart3,
-    slug: "actual-fuel-consumption"
-  },
-  { 
-    href: "/projects/performance-report", 
-    label: "Performance Report", 
-    icon: FileBarChart,
-    slug: "performance-report"
-  },
-  { 
-    href: "/projects/analytics-dashboard", 
-    label: "Analytics Dashboard", 
+  {
+    href: "/projects/analytics-dashboard",
+    label: "Analytics Dashboard",
     icon: LayoutDashboard,
     slug: "analytics-dashboard"
   },
-  { 
-    href: "/projects/report-summary", 
-    label: "Report Summary", 
+  {
+    href: "/",
+    label: "Fuel Optimization",
+    icon: Fuel,
+    slug: ""
+  },
+  {
+    href: "/projects/actual-fuel-consumption",
+    label: "Actual Fuel Consumption",
+    icon: BarChart3,
+    slug: "actual-fuel-consumption"
+  },
+  {
+    href: "/projects/performance-report",
+    label: "Performance Report",
+    icon: FileBarChart,
+    slug: "performance-report"
+  },
+  {
+    href: "/projects/report-summary",
+    label: "Report Summary",
     icon: Sparkles,
     slug: "report-summary"
   },
-  { 
-    href: "/projects/smart-parking", 
-    label: "Smart Parking", 
+  {
+    href: "/projects/smart-parking",
+    label: "Smart Parking",
     icon: ParkingCircle,
     slug: "smart-parking"
   },
@@ -83,9 +83,8 @@ export function Sidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`w-[280px] h-[calc(100vh-64px)] fixed lg:sticky top-16 left-0 bg-sidebar flex flex-col py-6 z-50 transition-transform duration-300 ${
-          sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
-        }`}
+        className={`w-[280px] h-[calc(100vh-64px)] fixed lg:sticky top-16 left-0 bg-sidebar flex flex-col py-6 z-50 transition-transform duration-300 ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+          }`}
       >
         <div className="px-6 mb-10">
           <div className="text-primary font-bold text-lg tracking-tighter uppercase font-[family-name:var(--font-headline)]">
@@ -115,8 +114,8 @@ export function Sidebar() {
         <nav className="flex-1 space-y-1">
           {projects.map((project) => {
             const Icon = project.icon
-            const isActive = project.href === "/" 
-              ? pathname === "/" 
+            const isActive = project.href === "/"
+              ? pathname === "/"
               : pathname === project.href
 
             return (
@@ -124,11 +123,10 @@ export function Sidebar() {
                 key={project.href}
                 href={project.href}
                 onClick={() => setSidebarOpen(false)}
-                className={`flex items-center px-6 py-3 space-x-3 transition-all duration-200 ease-in-out hover:bg-sidebar-accent active:scale-95 ${
-                  isActive
+                className={`flex items-center px-6 py-3 space-x-3 transition-all duration-200 ease-in-out hover:bg-sidebar-accent active:scale-95 ${isActive
                     ? "text-primary bg-sidebar-accent border-r-2 border-primary"
                     : "text-secondary hover:text-primary"
-                }`}
+                  }`}
               >
                 <Icon className="w-[18px] h-[18px]" />
                 <span className="font-[family-name:var(--font-headline)] font-medium uppercase tracking-wider text-[11px]">

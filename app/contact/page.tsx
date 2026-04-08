@@ -42,10 +42,27 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
 
-    console.log("Form submitted:", formData)
-    alert("Thank you for your message! I will get back to you soon.")
+    // Construct the WhatsApp message
+    const message = `
+Hello! I have a new message from the contact form:
+
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject}
+Message: ${formData.message}
+  `
+
+    // Encode message for URL
+    const encodedMessage = encodeURIComponent(message)
+
+    // Replace with your WhatsApp number in international format, e.g., 911234567890
+    const phoneNumber = "9177750 02299"
+
+    // Open WhatsApp chat with prefilled message
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank")
+
+    // Optional: Reset form
     setFormData({ name: "", email: "", subject: "", message: "" })
   }
 
