@@ -111,12 +111,12 @@ export default function AboutPage() {
                     <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-cyan-400" />
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-cyan-400" />
                     <div className="w-80 h-96 bg-cyan-950/20 border border-cyan-900/30 overflow-hidden">
-                      <Image
-                        src="/images/profile.jpg"
-                        alt="Laxmikant Yelgandrawar"
-                        width={320}
-                        height={384}
-                        className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                      <iframe
+                        className="w-full h-full"
+                        src="https://www.youtube.com/embed/k_Dl8Ljq5Uc?controls=1&rel=0&modestbranding=1"
+                        title="Video"
+                        allow="encrypted-media; picture-in-picture"
+                        allowFullScreen
                       />
                     </div>
                   </div>
