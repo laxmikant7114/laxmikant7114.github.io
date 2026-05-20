@@ -108,9 +108,12 @@ export default function AboutPage() {
                 </div>
                 <div className="flex justify-center">
                   <div className="relative group">
+                    {/* Corner Accents */}
                     <div className="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-cyan-400" />
                     <div className="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-cyan-400" />
-                    <div className="w-80 h-96 bg-cyan-950/20 border border-cyan-900/30 overflow-hidden">
+
+                    {/* Frame Container - Increased to 640x360 */}
+                    <div className="w-[360px] h-[480px] bg-cyan-950/20 border border-cyan-900/30 overflow-hidden">
                       <iframe
                         className="w-full h-full"
                         src="https://www.youtube.com/embed/k_Dl8Ljq5Uc?controls=1&rel=0&modestbranding=1"
