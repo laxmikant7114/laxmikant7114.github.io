@@ -39,8 +39,8 @@ export function TopNav() {
                 key={link.href}
                 href={link.href}
                 className={`font-[family-name:var(--font-headline)] text-[11px] font-bold tracking-[0.2em] uppercase transition-colors ${isActive
-                    ? "text-primary border-b-2 border-primary pb-1"
-                    : "text-secondary/60 hover:text-primary"
+                  ? "text-primary border-b-2 border-primary pb-1"
+                  : "text-secondary/60 hover:text-primary"
                   }`}
               >
                 {link.label}
@@ -49,7 +49,7 @@ export function TopNav() {
           })}
         </nav>
         <a
-          href="https://drive.google.com/file/d/1T7pTw5zRudoeM32PVrlmzlCJ945jIzV7/view?usp=sharing"
+          href="https://drive.google.com/file/d/1jrEbOV4Ut5kuVuIz0EuMPlqLSsqY8KAs/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="border border-cyan-400/50 text-primary px-4 lg:px-6 py-2 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center gap-2"
@@ -82,8 +82,8 @@ export function TopNav() {
                   href={link.href}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`font-[family-name:var(--font-headline)] text-sm font-bold tracking-[0.2em] uppercase transition-colors py-2 ${isActive
-                      ? "text-primary border-l-2 border-primary pl-4"
-                      : "text-secondary/60 hover:text-primary pl-4"
+                    ? "text-primary border-l-2 border-primary pl-4"
+                    : "text-secondary/60 hover:text-primary pl-4"
                     }`}
                 >
                   {link.label}
@@ -91,7 +91,7 @@ export function TopNav() {
               )
             })}
             <a
-              href="https://drive.google.com/file/d/1T7pTw5zRudoeM32PVrlmzlCJ945jIzV7/view?usp=sharing"
+              href="https://drive.google.com/file/d/1jrEbOV4Ut5kuVuIz0EuMPlqLSsqY8KAs/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="border border-cyan-400/50 text-primary px-6 py-3 text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-primary/10 transition-all active:scale-95 flex items-center justify-center gap-2 mt-2"

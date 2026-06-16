@@ -1,8 +1,15 @@
 import { TopNav } from "@/components/top-nav"
 import { Footer } from "@/components/footer"
-import { Calendar, Github, Linkedin, FileText, Award, BookOpen } from "lucide-react"
+import { Calendar, Github, Linkedin, FileText, Award, BookOpen, HeartPulse } from "lucide-react"
 
 const activities = [
+  {
+    icon: HeartPulse,
+    date: "Ongoing",
+    title: "Central Health Tracking AI Application",
+    description: "Developing India's first smart centralized health tracking AI application to track medical history, daily diet, calories, protein, and sugar intake, then generate a personalized health indicator from these metrics.",
+    type: "project",
+  },
   {
     icon: Award,
     date: "March 2026",
