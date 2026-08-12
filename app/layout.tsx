@@ -17,7 +17,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Laxmikant Yelgandrawar | Data Analyst Portfolio',
-  description: 'Data Analyst specializing in industrial efficiency, fuel optimization, and analytics dashboards. Driving $1.2M+ in annual savings.',
+  description: 'Data Analyst specializing in industrial efficiency, fuel optimization, and analytics dashboards. Driving $1.2Million+ in annual savings.',
 }
 
 export default function RootLayout({

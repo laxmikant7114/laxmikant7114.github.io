@@ -22,7 +22,7 @@ export function ImpactSection() {
               </span>
             </div>
             <p className="text-slate-300 font-[family-name:var(--font-headline)] text-base md:text-lg lg:text-xl leading-relaxed">
-              The <span className="text-cyan-400 font-bold">$1.2M dollars</span> of fuel
+              The <span className="text-cyan-400 font-bold">$1.2Million+</span> of fuel
               savings is achieved by optimizing{" "}
               <span className="text-white border-b border-cyan-400/30">8 such vessels</span>{" "}
               which resulted in annual fuel savings of around{" "}

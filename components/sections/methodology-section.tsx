@@ -8,7 +8,7 @@ const methodologySteps = [
 
 export function MethodologySection() {
   return (
-    <section className="py-16 md:py-32 px-4 md:px-8 lg:px-16 bg-[#0d1017] border-b border-cyan-900/10 relative">
+    <section id="methodology" className="scroll-mt-16 py-16 md:py-32 px-4 md:px-8 lg:px-16 bg-[#0d1017] border-b border-cyan-900/10 relative">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           <div className="lg:col-span-12">

@@ -136,7 +136,7 @@ export default function ActivityPage() {
                 </div>
                 <div className="p-8 bg-[#0a0c10] text-center">
                   <div className="text-3xl md:text-4xl font-[family-name:var(--font-headline)] font-bold text-cyan-400 mb-2">
-                    1.5+
+                    2+
                   </div>
                   <div className="text-[10px] font-[family-name:var(--font-headline)] uppercase tracking-widest text-slate-500">
                     Years Experience

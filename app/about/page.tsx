@@ -8,12 +8,12 @@ const experience = [
     title: "Data Analyst",
     company: "Gekko - Applied Drilling Intelligence, UK",
     period: "April 2025 - Present",
-    description: "Leading fuel optimization projects with 98.5% prediction accuracy, driving $1.2M+ annual savings.",
+    description: "Leading fuel optimization projects with 98.5% prediction accuracy, driving $1.2Million+ annual savings.",
     details: [
       {
         heading: "Built and optimized a vessel fuel prediction model that",
         bullets: [
-          "Helped our clients save ~$1.2M annually in fuel costs",
+          "Helped our clients save ~$1.2Million+ annually in fuel costs",
           "Helped the environment by conserving over 400k+ gallons of fuel yearly",
           "Made vessels 15% more efficient on average",
           "Elevated our model accuracy from 80% to 98.5%",
@@ -58,19 +58,25 @@ const experience = [
   {
     title: "Co-founder & Product Head ",
     company: "HR6 Solutions",
-    period: "Feb 2024 - Oct 2024",
-    description: "Built and scaled a cross-functional team of 16 members, driving the end-to-end product lifecycle for enterprise SaaS platforms.",
+    period: "Feb 2024 - Mar 2025",
+    description: "• Co-founded HR6 Solutions and led its journey from idea to market, building HRM, CRM, talent acquisition, and business operations solutions for SMEs.",
     details: [
       {
         heading: "Strategic Product Operations",
         bullets: [
-          "Formulated data-driven GTM strategies and business models by synthesizing real-time market signals, bridging the gap between engineering roadmaps and commercial goals",
+          "Owned product strategy, planning, research, competitor analysis, stakeholder management, release planning, and client-specific customization using Lean Product principles",
         ],
       },
       {
         heading: "Growth & Operational Excellence",
         bullets: [
-          "Orchestrated daily business operations and automated lead generation pipelines, optimizing marketing workflows to secure strategic client partnerships and accelerate early-stage growth",
+          "Built and managed a 16-member cross-functional team across product, operations, business development, and client success, driving client onboarding, product adoption, operational workflows, and go-to-market execution.",
+        ],
+      },
+      {
+        heading: "Client Engagement & Product Leadership",
+        bullets: [
+          " Led national and international client engagements, translating business needs into product features and driving key product and business decisions.",
         ],
       },
     ],
