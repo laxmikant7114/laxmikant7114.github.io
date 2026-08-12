@@ -5,11 +5,7 @@ import { usePathname } from "next/navigation"
 import Image from "next/image"
 import {
   Fuel,
-  BarChart3,
-  FileBarChart,
   LayoutDashboard,
-  Sparkles,
-  ParkingCircle,
   Menu,
   X
 } from "lucide-react"
@@ -27,30 +23,6 @@ const projects = [
     label: "Fuel Optimization",
     icon: Fuel,
     slug: ""
-  },
-  {
-    href: "/projects/actual-fuel-consumption",
-    label: "Actual Fuel Consumption",
-    icon: BarChart3,
-    slug: "actual-fuel-consumption"
-  },
-  {
-    href: "/projects/performance-report",
-    label: "Performance Report",
-    icon: FileBarChart,
-    slug: "performance-report"
-  },
-  {
-    href: "/projects/report-summary",
-    label: "Report Summary",
-    icon: Sparkles,
-    slug: "report-summary"
-  },
-  {
-    href: "/projects/smart-parking",
-    label: "Smart Parking",
-    icon: ParkingCircle,
-    slug: "smart-parking"
   },
 ]
 
